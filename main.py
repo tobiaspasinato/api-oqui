@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-class Tobias(BaseModel):
+class Alonso(BaseModel):
     nombre: str
     apellido: str
     edad: int
@@ -14,5 +14,5 @@ def index():
     return {"msj" : "Hola soy un Ñoqui"}
 
 @app.get("/getinfo")
-def mostrar_info(Persona : Tobias):
-    return {"tobias" : f"Nombre : {Persona.nombre},\nApellido : {Persona.apellido}"}
+def mostrar_info(Persona : Alonso):
+    return {"Piloto" : f"Nombre : {Persona.nombre},\nApellido : {Persona.apellido}"}
